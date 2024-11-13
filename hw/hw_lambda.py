@@ -10,7 +10,7 @@ print("dividable by 7:", list(filter(lambda number: number % 7 == 0, numbers)))
 print("2 digits", list(filter(lambda number: 9 < number < 100, numbers)))
 print("equal digits:", list(filter(lambda number: 9 < number < 100 and number % 10 == number // 10, numbers)))
 print("sum digits equal to 9: ",
-      list(filter(lambda number: number == 9 or number > 10 and number % 10 == number // 10, numbers)))
+      list(filter(lambda number: number % 10 + number // 10==9, numbers)))
 avg = mean(numbers)  # too spare calculate the avg every number
 print("avg:", avg)
 print("bigger than avg:", list(filter(lambda number: number > avg, numbers)))
